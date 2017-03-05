@@ -43,8 +43,7 @@ class Solution(object):
             c=s[i]
             if c in table:
                 weizhi=table.index(c)
-                for iii in xrange(weizhi+1):
-                   table.pop(0)
+                table=table[weizhi+1:]
                 table.append(c)
                 length=len(table)
             else:
@@ -58,6 +57,6 @@ class Solution(object):
         return maxlength
         
 if __name__=='__main__':
-    test="abcabcbb"    
+    test="bbbbb"    
     a=Solution()
     num=a.lengthOfLongestSubstring(test)
